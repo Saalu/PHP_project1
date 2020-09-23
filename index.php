@@ -1,66 +1,26 @@
 <?php 
 
-// while loop
-$i = 1;
-while ($i < 7){
-    echo "This value is $i <br/>";
-    $i++;
+
+function sayHello($name, $time= 'day'){
+    echo "Good-$time $name, keep going <br/>";
 }
 
-//do-while loop
-$x = 5;
-do{
-    echo "The number is " . $x . "<br/>";
-    $x++;
-}while($x <= 7);
+sayHello('Saalu', 'afternoon');
 
-for($a = 0; $a < 6; $a++){
-    echo "Value of a : " . $a . "<br/>";
+// example 2
+//variable Scope
+
+$name = 'sir';
+
+function myFunc(){
+    global $name;
+    $name = 'Madam';
+    echo "Hello $name";
 }
 
-// foreach loop
-$names = ['Kofi', 'Ama', 'Ako'];
+myFunc()
 
-foreach ($names as $name) {
-    echo $name . "<br/>";
 
-}
-
-// switch control
-$today = 'Tue';
-
-switch($today){
-    case "Mon":
-        echo "Today is Monday";
-    break;
-    case "Tue":
-        echo "Today is Tuesday";
-    break;
-    case "Wed":
-        echo "Today is Wednesday";
-    break;
-    case "Thur":
-        echo "Today is Thursday";
-    break;
-    case "Fri":
-        echo "Today is Friday";
-    break;
-    default;
-    echo "Invalid day";
-    
-}
-
-echo "<br/>";
-// continue statement
-for($i = 0; $i< 10; $i++){
-    if($i%2 == 0){
-        continue;
-    }
-    echo $i . ' ';
-}
-echo "<br/>";
-// looping array
-$products = ['milo', 'sardine', 'milk', 'magerine']
 
 ?>
 
@@ -72,16 +32,12 @@ $products = ['milo', 'sardine', 'milk', 'magerine']
     <title>PHP Learning</title>
 </head>
 <body>
-    <h1>Products</h1>
+    <h1>Testing</h1>
    
 <ul>
 
-
-<?php foreach($products as $product){  ?>
-
-    <h3>  <?php echo $product ; ?> </h3>
-<?php } ?>
 </ul>
+
 
 </body>
 </html>
