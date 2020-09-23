@@ -1,18 +1,33 @@
 <?php 
+// exaple 1
+function sayHello($name, $time= 'day'){
+    echo "Good-$time $name, keep going <br/>";
+}
+sayHello('Saalu', 'afternoon');
 
+// example 2
+function formatProduct($product){
+   // echo "{$product['name']} costs {$product['price']} to buy <br/>";
+   return "{$product['name']} costs {$product['price']} to buy <br/>";
 
-function sayHello($name='saalih', $time = 'evening'){
-    echo "good $time $name";
 }
 
-sayHello('Adjoa', 'night');
-
-function formatPro($product){
-   // echo "{$product['name']} cost {$product['price']} to buy <br />";
-    return "{$product['name']} cost {$product['price']} to buy <br />";
-}
-
-$formatted = formatPro(['name' => 'gold stars', 'price' => 20]);
+$formatted = formatProduct(['name' => 'Watch', 'price'=> 30]);
 echo $formatted;
+
+
+// example 2
+//variable Scope
+
+$name = 'sir';
+
+function myFunc(){
+    global $name;
+    $name = 'Madam';
+    echo "Hello $name";
+}
+
+myFunc()
+
 
 ?>
