@@ -22,6 +22,7 @@
 
     span{
         margin-left:30px;
+        font-weight: 600;
     }
 
 </style>
