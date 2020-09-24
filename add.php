@@ -41,7 +41,22 @@ if(empty($_POST['ingredients'])){
         $errors['ingredients'] = 'Ingredients must be a comma separated list';
     }
 }
+
+// redirecting users
+if(array_filter($errors)){
+// errors
+}else{
+    header('Location: index.php');
+}
+
+
+
+
 // Validation end
+
+
+
+
 
 }
 

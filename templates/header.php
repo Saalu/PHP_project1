@@ -19,6 +19,9 @@
         padding: 20px;
     }
 
+    logo{
+        font-weight: 700;
+    }
 
     span{
         margin-left:30px;
@@ -31,7 +34,7 @@
 <body class= 'grey lighten-4'>
     <nav class='white' z-depth-0'>
         <div class='container'>
-            <a href='#' class='brand-logo brand-text'>DGreat Pizza </a>
+            <a href='#' class='brand-logo brand-text'><span id='logo'>D</span>Great Pizza </a>
             <ul id='nav-mobile' class='right hide-on-small-and-down'>
                 <li><a href="#" class='btn brand z-depth-0'>Add a Pizza</a></li>
             </ul>
